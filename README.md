@@ -12,6 +12,7 @@
 
     <nav>
         <a href="index.html">Home</a> |
+        <a href="app-overview.html">App Overview</a> |
         <a href="code-review.html">Code Review</a> |
         <a href="software-design.html">Software Design & Engineering</a> |
         <a href="algorithms.html">Algorithms & Data Structures</a> |
