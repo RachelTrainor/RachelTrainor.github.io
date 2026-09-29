@@ -26,21 +26,134 @@
 </p>
 
 <h2>Enhancement Narrative</h2>
-    <p>The artifact I chose for this milestone is my Weight Tracker application (Weigh to Go), which I created in CS 360: Mobile Architecture and Programming. I built the application in Android Studio using Java and SQLite. It gives users a simple way to track their weight and progress toward a goal. Users can add weight entries, view previous entries, edit or delete records, set a goal weight, and enter a phone number to receive SMS notifications when they reach their goal.
-I chose this artifact because it was one of my favorite projects that I completed during the Computer Science program. It also gives me a good opportunity to show different skills in one application. The original version was functional, but after looking back at the code during my code review, I could see several areas where I could improve the design, organization, error handling, and overall user experience.
-I included the weight tracker in my ePortfolio because I think it shows more than just my ability to write Java code. The application combines user interface, application logic, database operations, input validation, Android permissions, and SMS functionality. It also shows how different parts of an application have to work together to create something that is actually useful to a user.
-One of the main improvements I made was stronger input validation. Instead of displaying one general error when information is missing or incorrect, the application now identifies the specific field that needs to be fixed. Weight and goal weight values are also checked to make sure they are within a reasonable range before they can be saved. I used constraints for the minimum and maximum accepted weights instead of repeating those values throughout the code. I also used requestFocus() to automatically return the user to the field that needs attention. These changes made the application more reliable while also making errors easier for the user to understand.
-Another important part of the enhancement was refactoring the WeightActivity class. A lot of the original functionality was handled inside larger blocks of code, especially in onCreate() and the button listeners. I separated these responsibilities into smaller methods for initializing views, setting up button listeners, validating weights, adding and updating records, displaying records, and handling different user actions. I also created reusable methods when the same behavior was needed in multiple places. This made the code easier to follow and gave each method a clearer purpose.
-I also focused on protecting the user’s information from accidental actions. Previously, a weight record could be deleted as soon as the Delete button was selected. I added a confirmation dialog that gives the user the choice to delete the entry or cancel the action. The application now provides feedback after a record is deleted as well. Although this is a relatively small change from the user’s perspective, I think it is an important design improvement because deleting information is a permanent action and should require confirmation.
-The editing process was also improved. I added a Cancel Edit option that only appears when an existing record is being edited. I separated entering and leaving edit mode into their own methods and made sure the application returns to its normal state after an update, cancellation, or deletion of the record being edited. This makes it clearer to the user whether they are creating a new entry or changing an existing one.
-Finally, I improved the SMS notification behavior. The application now provides feedback if the user reaches their goal but does not have a phone number entered or SMS permission is unavailable. I also separated the checks for whether an SMS can be sent from the method that actually sends the message. If the SMS fails, the user is still informed that their goal was reached instead of receiving no explanation about what happened.
-The enhancements I completed met the main course outcomes I planned to address for the software design and engineering portion of my ePortfolio. The strongest connection is the fourth course outcome, which focuses on using computing techniques, skills, and tools to implement solutions that provide value or solve a problem. I demonstrated progress towards this outcome by improving the structure and maintainability of the application while also improving how the user interacts with it. Refactoring the code into smaller methods, removing unnecessary code, reducing repeated logic, and improving error handling all contributed to a stronger software design.
-I also made progress toward the security-focused course outcome. While this is not primarily a security application, I still had to think about how the application handles user input, permissions, and stored information. Validating information before allowing it to reach the database helps prevent invalid data from being stored. Requiring confirmation before deleting a record also helps protect the integrity of the user’s data. The improvements to SMS handling made the application more aware of whether it actually has permission to act instead of assuming the permission is available.
-I do not need to make major changes to my original outcome-coverage plan at this point. Since I am using the weight tracker as my artifact across multiple enhancement categories, I plan to demonstrate the algorithm, data structure, and database outcomes more strongly in the later milestones. For this milestone, I intentionally focused more on software design and engineering instead of making changes that would take away from the later enhancements.
-Enhancing this artifact helped me see the difference between code that works and code that is well organized and easier to maintain. When I originally created the application, I was mostly focused on getting the required features working. This time, I focused more on code structure, validation, user feedback, and how the application handles unexpected situations.
-One challenge was making improvements without breaking features that already worked. I handled this by testing each enhancement as I completed it, including adding, editing, deleting, and validating weight entries. Overall, this process showed me how smaller improvements to code, organization, and user experience can make an application more reliable and professional.
+
+<p>
+    The artifact I chose for this milestone is my Weight Tracker application
+    (Weigh to Go), which I created in CS 360: Mobile Architecture and Programming.
+    I built the application in Android Studio using Java and SQLite. It gives users
+    a simple way to track their weight and progress toward a goal. Users can add
+    weight entries, view previous entries, edit or delete records, set a goal
+    weight, and enter a phone number to receive SMS notifications when they reach
+    their goal.
 </p>
 
+<p>
+    I chose this artifact because it was one of my favorite projects that I
+    completed during the Computer Science program. It also gives me a good
+    opportunity to show different skills in one application. The original version
+    was functional, but after looking back at the code during my code review, I
+    could see several areas where I could improve the design, organization, error
+    handling, and overall user experience.
+</p>
+
+<p>
+    I included the weight tracker in my ePortfolio because I think it shows more
+    than just my ability to write Java code. The application combines user
+    interface, application logic, database operations, input validation, Android
+    permissions, and SMS functionality. It also shows how different parts of an
+    application have to work together to create something that is actually useful
+    to a user.
+</p>
+
+<p>
+    One of the main improvements I made was stronger input validation. Instead of
+    displaying one general error when information is missing or incorrect, the
+    application now identifies the specific field that needs to be fixed. Weight
+    and goal weight values are also checked to make sure they are within a
+    reasonable range before they can be saved. I used constraints for the minimum
+    and maximum accepted weights instead of repeating those values throughout the
+    code. I also used requestFocus() to automatically return the user to the field
+    that needs attention. These changes made the application more reliable while
+    also making errors easier for the user to understand.
+</p>
+
+<p>
+    Another important part of the enhancement was refactoring the WeightActivity
+    class. A lot of the original functionality was handled inside larger blocks
+    of code, especially in onCreate() and the button listeners. I separated these
+    responsibilities into smaller methods for initializing views, setting up
+    button listeners, validating weights, adding and updating records, displaying
+    records, and handling different user actions. I also created reusable methods
+    when the same behavior was needed in multiple places. This made the code
+    easier to follow and gave each method a clearer purpose.
+</p>
+
+<p>
+    I also focused on protecting the user’s information from accidental actions.
+    Previously, a weight record could be deleted as soon as the Delete button was
+    selected. I added a confirmation dialog that gives the user the choice to
+    delete the entry or cancel the action. The application now provides feedback
+    after a record is deleted as well. Although this is a relatively small change
+    from the user’s perspective, I think it is an important design improvement
+    because deleting information is a permanent action and should require
+    confirmation.
+</p>
+
+<p>
+    The editing process was also improved. I added a Cancel Edit option that only
+    appears when an existing record is being edited. I separated entering and
+    leaving edit mode into their own methods and made sure the application returns
+    to its normal state after an update, cancellation, or deletion of the record
+    being edited. This makes it clearer to the user whether they are creating a
+    new entry or changing an existing one.
+</p>
+
+<p>
+    Finally, I improved the SMS notification behavior. The application now
+    provides feedback if the user reaches their goal but does not have a phone
+    number entered or SMS permission is unavailable. I also separated the checks
+    for whether an SMS can be sent from the method that actually sends the
+    message. If the SMS fails, the user is still informed that their goal was
+    reached instead of receiving no explanation about what happened.
+</p>
+
+<p>
+    The enhancements I completed met the main course outcomes I planned to address
+    for the software design and engineering portion of my ePortfolio. The
+    strongest connection is the fourth course outcome, which focuses on using
+    computing techniques, skills, and tools to implement solutions that provide
+    value or solve a problem. I demonstrated progress towards this outcome by
+    improving the structure and maintainability of the application while also
+    improving how the user interacts with it. Refactoring the code into smaller
+    methods, removing unnecessary code, reducing repeated logic, and improving
+    error handling all contributed to a stronger software design.
+</p>
+
+<p>
+    I also made progress toward the security-focused course outcome. While this is
+    not primarily a security application, I still had to think about how the
+    application handles user input, permissions, and stored information.
+    Validating information before allowing it to reach the database helps prevent
+    invalid data from being stored. Requiring confirmation before deleting a
+    record also helps protect the integrity of the user’s data. The improvements
+    to SMS handling made the application more aware of whether it actually has
+    permission to act instead of assuming the permission is available.
+</p>
+
+<p>
+    I do not need to make major changes to my original outcome-coverage plan at
+    this point. Since I am using the weight tracker as my artifact across multiple
+    enhancement categories, I plan to demonstrate the algorithm, data structure,
+    and database outcomes more strongly in the later milestones. For this
+    milestone, I intentionally focused more on software design and engineering
+    instead of making changes that would take away from the later enhancements.
+</p>
+
+<p>
+    Enhancing this artifact helped me see the difference between code that works
+    and code that is well organized and easier to maintain. When I originally
+    created the application, I was mostly focused on getting the required features
+    working. This time, I focused more on code structure, validation, user
+    feedback, and how the application handles unexpected situations.
+</p>
+
+<p>
+    One challenge was making improvements without breaking features that already
+    worked. I handled this by testing each enhancement as I completed it,
+    including adding, editing, deleting, and validating weight entries. Overall,
+    this process showed me how smaller improvements to code, organization, and
+    user experience can make an application more reliable and professional.
+</p>
     <p><a href="index.html">Return to Home</a></p>
 
 </body>
