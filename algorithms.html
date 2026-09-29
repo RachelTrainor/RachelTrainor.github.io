@@ -9,20 +9,127 @@
 
 <body>
 
-    <h1>Algorithms & Data Structures</h1>
+    <div style="text-align: center; max-width: 850px; margin: 0 auto;">
 
-    <p>
-        This section presents my algorithms and data structures enhancement
-        of the Weigh To Go Android application.
+        <h1>Algorithms & Data Structures</h1>
+
+        <p>
+            This section presents my algorithms and data structures enhancement
+            of the Weigh To Go Android application.
+        </p>
+
+        <p>
+            <a href="artifacts/WeighToGo_Original.zip">Download Original Artifact</a>
+        </p>
+
+        <p>
+            <a href="artifacts/WeighToGo_AlgorithmsEnhanced.zip">Download Enhanced Artifact</a>
+        </p>
+
+    </div>
+
+    <h2 style="text-align: center;">Enhancement Narrative</h2>
+
+    <div style="max-width: 850px; margin: 0 auto; line-height: 1.6;">
+
+        <p>
+            For this section, I chose to enhance my Weigh to Go Android application,
+            which I created in CS360. The app allows users to enter and manage their
+            weight, set a goal weight, and receive an SMS notification when they reach
+            their goal. I chose to continue using this artifact because it offered many
+            opportunities to improve how the app uses weight data instead of only
+            storing and displaying it.
+        </p>
+
+        <p>
+            For this enhancement, I focused on algorithms and data structures. I created
+            a WeightRecord class to better organize each weight entry and used an
+            ArrayList to store the records while they are being processed. I also added
+            sorting options that allow the user to sort their records by oldest, newest,
+            lowest weight, or highest weight. The app now analyzes the records to
+            calculate the user’s starting weight, current weight, total weight lost or
+            gained, average change between entries, recent changes, recent trend, and
+            progress towards their goal. I also created a separate progress screen and
+            added a progress bar so the results are easier for the user to understand.
+        </p>
+
+        <p>
+            Before this enhancement, the weight log was mostly used to save, edit,
+            display, and delete weight entries. The information was there, but the app
+            was not doing much with it. I wanted this enhancement to make the stored
+            data more useful to the user.
+        </p>
+
+        <p>
+            One of the biggest changes was using an ArrayList&lt;WeightRecord&gt; to work
+            with these records after they are retrieved from the database. This made it
+            easier to sort and analyse the data without changing how it is stored. I
+            added different sorting options so the user has more control over how they
+            view their history. I also had to account for different date formats so the
+            records would be sorted by the actual data instead of treating the date as
+            regular text.
+        </p>
+
+        <p>
+            I added several calculations that go through the records and use the data to
+            give the user more information. For example, the app compares consecutive
+            entries to calculate average weight change and compares the two newest
+            entries to show the most recent change. It also looks at recent records to
+            determine whether the user’s weight is increasing, decreasing, or staying
+            stable. The goal progress calculation compares the starting, current, and
+            goal weights and converts that result into a percentage, which is also shown
+            through a progress bar.
+        </p>
+
+        <p>
+            These changes improved the artifact because the weight records now have more
+            of a purpose. Instead of the user having to look at the entries and figure
+            out their progress themselves, the application does that work for them.
+        </p>
+
+        <p>
+            This enhancement helped me demonstrate the course outcome related to
+            designing and evaluating computing solutions using algorithmic principles
+            and computer science practices. I had to decide how to organize the weight
+            records, how they should be sorted, and how to move through the data to
+            calculate useful information. Using an ArrayList gave me a way to work with
+            a changing number of weight records, while the WeightRecord class kept the
+            data organized. I also used comparison and sorting logic for the different
+            ways the user can view their records.
+        </p>
+
+        <p>
+            This enhancement also connects to designing professional-quality software
+            because I tried to keep the new features useful instead of adding algorithms
+            just to show that I could. Moving the analysis to its own progress screen
+            helped me keep the weight log from becoming too crowded while still giving
+            the user access to more detailed information when they want it.
+        </p>
+
+        <p>
+            This enhancement helped me better understand how algorithms and data
+            structures can be used to make stored data more useful. One challenge I ran
+            into was getting the weight records to sort correctly because I had used
+            different weight formats when testing the app. Fixing this showed me how
+            important it is to account for different types of user input.
+        </p>
+
+        <p>
+            I also learned that adding more features does not always mean putting
+            everything on the same screen. Moving the progress information to its own
+            screen made the app feel less crowded and easier to use. Testing the
+            different sorting options and calculations also helped me see how each part
+            of the code worked together. Overall, this enhancement gave me more
+            experience with organizing, sorting, and analyzing data while keeping the
+            user experience in mind.
+        </p>
+
+    </div>
+
+    <p style="text-align: center;">
+        <a href="index.html">Return to Home</a>
     </p>
 
-    <h2>Artifact</h2>
-    <p>Original and enhanced artifact will be added here.</p>
-
-    <h2>Enhancement Narrative</h2>
-    <p>Algorithms and Data Structures narrative will be added here.</p>
-
-    <p><a href="index.html">Return to Home</a></p>
-
 </body>
+
 </html>
