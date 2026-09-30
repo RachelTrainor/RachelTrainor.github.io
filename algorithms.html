@@ -4,131 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Algorithms & Data Structures | Rachel Trainor</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div style="text-align: center; max-width: 850px; margin: 0 auto;">
+    <header>
+        <h1>Rachel Trainor</h1>
+        <p>Computer Science ePortfolio</p>
+    </header>
 
-        <h1>Algorithms & Data Structures</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="app-overview.html">App Overview</a>
+        <a href="code-review.html">Code Review</a>
+        <a href="software-design.html">Software Design</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="databases.html">Databases</a>
+    </nav>
+
+    <main>
+
+        <!-- Page Introduction -->
+
+        <div class="card" style="text-align: center;">
+
+            <h1>Algorithms & Data Structures</h1>
+
+            <p>
+                This section presents my algorithms and data structures
+                enhancement of the Weigh To Go Android application.
+            </p>
+
+            <a class="button"
+               href="artifacts/WeighToGo_Original.zip">
+                Download Original Artifact
+            </a>
+
+            <a class="button"
+               href="artifacts/WeighToGo_AlgorithmsEnhanced.zip">
+                Download Enhanced Artifact
+            </a>
+
+        </div>
+
+
+        <!-- Enhancement Narrative -->
+
+        <div class="card">
+
+            <h2 style="text-align: center;">Enhancement Narrative</h2>
+
+            <p>
+                For this enhancement, I continued working with my Weigh To Go
+                Android application that I originally created in CS 360: Mobile
+                Architecture and Programming. The application allows users to
+                record their weight, set a goal weight, and receive SMS
+                notifications. I continued using this artifact because it gave
+                me several opportunities to improve how the application uses the
+                data it collects.
+            </p>
+
+            <p>
+                For the algorithms and data structures enhancement, I added a
+                WeightRecord class and used an ArrayList to organize the user's
+                weight records. I also added sorting options that allow records
+                to be sorted from oldest to newest, newest to oldest, lowest to
+                highest weight, and highest to lowest weight. In addition, I
+                created calculations for starting and current weight, total
+                weight lost or gained, average weight change, recent weight
+                changes and trends, and progress toward the user's goal. I also
+                created a separate progress screen with a progress bar.
+            </p>
+
+            <p>
+                Before this enhancement, the weight log mainly allowed users to
+                save, edit, display, and delete their records. I wanted the
+                application to do more with the information that was already
+                being stored instead of only displaying it back to the user.
+            </p>
+
+            <p>
+                I used an ArrayList&lt;WeightRecord&gt; after retrieving the
+                records from the database. This allows the application to sort
+                and analyze the records without changing how they are stored in
+                the database. I also made sure dates are compared as actual
+                dates instead of only sorting the date text. This makes the
+                sorting more reliable when different date formats are used.
+            </p>
+
+            <p>
+                I added calculations that move through the weight records to
+                provide more useful information. The application calculates the
+                average change between consecutive entries, compares the two
+                newest records to determine the most recent change, and uses
+                recent records to identify whether the user's weight trend is
+                increasing, decreasing, or staying stable. Goal progress is also
+                calculated as a percentage and displayed using a progress bar.
+            </p>
+
+            <p>
+                These changes made the stored weight information more useful to
+                the user. Instead of only seeing individual records, the user can
+                now see how their weight has changed over time and how much
+                progress they have made toward their goal.
+            </p>
+
+            <p>
+                This enhancement demonstrates the course outcome related to
+                designing and evaluating computing solutions using algorithmic
+                principles. I used data organization, sorting, traversal, and
+                calculations to turn stored records into useful information.
+                The ArrayList works well because the number of weight records can
+                change over time, while the WeightRecord class keeps each record
+                organized. The comparison and sorting logic also allows the same
+                data to be viewed in different ways.
+            </p>
+
+            <p>
+                This enhancement also helped improve the overall quality of the
+                application. Instead of placing every feature on the weight log
+                screen, I created a separate progress screen for the analysis.
+                This keeps the interface from becoming too crowded while still
+                giving users access to more detailed information.
+            </p>
+
+            <p>
+                Working on this enhancement helped me better understand how
+                algorithms and data structures can make stored data more useful.
+                One challenge was making sure the records sorted correctly when
+                users entered dates in different formats. I also had to test the
+                calculations with different weight records to make sure the
+                results were accurate. This showed me the importance of
+                considering user input when designing algorithms.
+            </p>
+
+            <p>
+                I also learned that adding more functionality does not mean every
+                feature needs to be placed on the same screen. Moving the
+                progress information to its own screen made the application less
+                crowded and easier to use. Testing the sorting and calculations
+                gave me more experience organizing, sorting, and analyzing data
+                while still considering the user experience.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
 
         <p>
-            This section presents my algorithms and data structures enhancement
-            of the Weigh To Go Android application.
+            <a href="index.html">Return to Home</a>
         </p>
 
-        <p>
-            <a href="artifacts/WeighToGo_Original.zip">Download Original Artifact</a>
-        </p>
+        <p>Rachel Trainor | Computer Science ePortfolio</p>
 
-        <p>
-            <a href="artifacts/WeighToGo_AlgorithmsEnhanced.zip">Download Enhanced Artifact</a>
-        </p>
-
-    </div>
-
-    <h2 style="text-align: center;">Enhancement Narrative</h2>
-
-    <div style="max-width: 850px; margin: 0 auto; line-height: 1.6;">
-
-        <p>
-            For this section, I chose to enhance my Weigh to Go Android application,
-            which I created in CS360. The app allows users to enter and manage their
-            weight, set a goal weight, and receive an SMS notification when they reach
-            their goal. I chose to continue using this artifact because it offered many
-            opportunities to improve how the app uses weight data instead of only
-            storing and displaying it.
-        </p>
-
-        <p>
-            For this enhancement, I focused on algorithms and data structures. I created
-            a WeightRecord class to better organize each weight entry and used an
-            ArrayList to store the records while they are being processed. I also added
-            sorting options that allow the user to sort their records by oldest, newest,
-            lowest weight, or highest weight. The app now analyzes the records to
-            calculate the user’s starting weight, current weight, total weight lost or
-            gained, average change between entries, recent changes, recent trend, and
-            progress towards their goal. I also created a separate progress screen and
-            added a progress bar so the results are easier for the user to understand.
-        </p>
-
-        <p>
-            Before this enhancement, the weight log was mostly used to save, edit,
-            display, and delete weight entries. The information was there, but the app
-            was not doing much with it. I wanted this enhancement to make the stored
-            data more useful to the user.
-        </p>
-
-        <p>
-            One of the biggest changes was using an ArrayList&lt;WeightRecord&gt; to work
-            with these records after they are retrieved from the database. This made it
-            easier to sort and analyse the data without changing how it is stored. I
-            added different sorting options so the user has more control over how they
-            view their history. I also had to account for different date formats so the
-            records would be sorted by the actual data instead of treating the date as
-            regular text.
-        </p>
-
-        <p>
-            I added several calculations that go through the records and use the data to
-            give the user more information. For example, the app compares consecutive
-            entries to calculate average weight change and compares the two newest
-            entries to show the most recent change. It also looks at recent records to
-            determine whether the user’s weight is increasing, decreasing, or staying
-            stable. The goal progress calculation compares the starting, current, and
-            goal weights and converts that result into a percentage, which is also shown
-            through a progress bar.
-        </p>
-
-        <p>
-            These changes improved the artifact because the weight records now have more
-            of a purpose. Instead of the user having to look at the entries and figure
-            out their progress themselves, the application does that work for them.
-        </p>
-
-        <p>
-            This enhancement helped me demonstrate the course outcome related to
-            designing and evaluating computing solutions using algorithmic principles
-            and computer science practices. I had to decide how to organize the weight
-            records, how they should be sorted, and how to move through the data to
-            calculate useful information. Using an ArrayList gave me a way to work with
-            a changing number of weight records, while the WeightRecord class kept the
-            data organized. I also used comparison and sorting logic for the different
-            ways the user can view their records.
-        </p>
-
-        <p>
-            This enhancement also connects to designing professional-quality software
-            because I tried to keep the new features useful instead of adding algorithms
-            just to show that I could. Moving the analysis to its own progress screen
-            helped me keep the weight log from becoming too crowded while still giving
-            the user access to more detailed information when they want it.
-        </p>
-
-        <p>
-            This enhancement helped me better understand how algorithms and data
-            structures can be used to make stored data more useful. One challenge I ran
-            into was getting the weight records to sort correctly because I had used
-            different weight formats when testing the app. Fixing this showed me how
-            important it is to account for different types of user input.
-        </p>
-
-        <p>
-            I also learned that adding more features does not always mean putting
-            everything on the same screen. Moving the progress information to its own
-            screen made the app feel less crowded and easier to use. Testing the
-            different sorting options and calculations also helped me see how each part
-            of the code worked together. Overall, this enhancement gave me more
-            experience with organizing, sorting, and analyzing data while keeping the
-            user experience in mind.
-        </p>
-
-    </div>
-
-    <p style="text-align: center;">
-        <a href="index.html">Return to Home</a>
-    </p>
+    </footer>
 
 </body>
 
