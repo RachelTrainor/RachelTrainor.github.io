@@ -82,3 +82,44 @@ footer {
 .markdown-body > h1:first-of-type {
     display: none;
 }
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.feature-image {
+    width: 250px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.image-placeholder {
+    width: 220px;
+    height: 350px;
+    background-color: #f0f0eb;
+    border: 2px dashed #a8b89a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66775d;
+    margin: auto;
+}
+
+.feature-description {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
