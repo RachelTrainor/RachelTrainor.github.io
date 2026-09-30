@@ -79,3 +79,6 @@ footer {
     margin-top: 50px;
     color: #66775d;
 }
+.markdown-body > h1:first-of-type {
+    display: none;
+}
