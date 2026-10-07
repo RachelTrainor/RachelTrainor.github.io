@@ -963,9 +963,12 @@ footer {
 
 
 /* ========================================
-   PROJECT DETAIL PAGE
    MOSSWOOD APOTHECARY
+   PROJECT DETAIL PAGE
    ======================================== */
+
+
+/* ---------- PROJECT HERO ---------- */
 
 .project-detail-hero {
     min-height: 75vh;
@@ -1139,39 +1142,63 @@ footer {
     gap: 20px;
 }
 
-.screenshot-placeholder {
-    min-height: 320px;
-
-    padding: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.project-screenshot {
+    overflow: hidden;
 
     background: var(--background-light);
 
     border: 1px solid var(--border);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
 }
 
-.screenshot-placeholder:first-child {
+.project-screenshot:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--accent);
+}
+
+.project-screenshot.featured-screenshot {
     grid-column: span 2;
-
-    min-height: 450px;
 }
 
-.screenshot-placeholder span {
-    margin-bottom: 8px;
+.project-screenshot img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-screenshot.featured-screenshot img {
+    width: 100%;
+    height: auto;
+}
+
+.project-screenshot figcaption {
+    padding: 20px 24px;
+}
+
+.project-screenshot figcaption span {
+    display: block;
+
+    margin-bottom: 5px;
 
     color: var(--accent);
 
     font-size: 0.62rem;
     letter-spacing: 2px;
+
+    text-transform: uppercase;
 }
 
-.screenshot-placeholder p {
+.project-screenshot figcaption p {
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 
@@ -1281,10 +1308,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .screenshot-placeholder:first-child {
+    .project-screenshot.featured-screenshot {
         grid-column: span 1;
+    }
 
-        min-height: 320px;
+    .project-screenshot img,
+    .project-screenshot.featured-screenshot img {
+        width: 100%;
+        height: auto;
     }
 
     .project-detail-columns {
@@ -1303,8 +1334,11 @@ footer {
         font-size: 3.7rem;
     }
 
-    .feature-card,
-    .screenshot-placeholder {
+    .feature-card {
         padding: 25px;
+    }
+
+    .project-screenshot figcaption {
+        padding: 18px 20px;
     }
 }
