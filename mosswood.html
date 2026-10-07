@@ -1,96 +1,487 @@
-/* ---------- SCREENSHOTS ---------- */
+<!DOCTYPE html>
+<html lang="en">
 
-.project-screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    gap: 20px;
-}
+    <title>Mosswood Apothecary | Rachel Trainor</title>
 
-.project-screenshot {
-    overflow: hidden;
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    background: var(--background-light);
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+          rel="stylesheet">
 
-    border: 1px solid var(--border);
-
-    transition:
-        transform 0.3s,
-        border-color 0.3s;
-}
-
-.project-screenshot:hover {
-    transform: translateY(-4px);
-
-    border-color: var(--accent);
-}
-
-.project-screenshot.featured-screenshot {
-    grid-column: span 2;
-}
-
-.project-screenshot img {
-    width: 100%;
-    height: 100%;
-
-    max-height: 420px;
-
-    object-fit: cover;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.project-screenshot.featured-screenshot img {
-    max-height: none;
-
-    aspect-ratio: 16 / 7.5;
-
-    object-fit: cover;
-}
-
-.project-screenshot figcaption {
-    padding: 20px 24px;
-}
-
-.project-screenshot figcaption span {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: var(--accent);
-
-    font-size: 0.62rem;
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-.project-screenshot figcaption p {
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 1.4rem;
-}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
 
-/* Screenshot mobile layout */
+<body>
 
-@media (max-width: 750px) {
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
 
-    .project-screenshot-grid {
-        grid-template-columns: 1fr;
-    }
+    <nav>
 
-    .project-screenshot.featured-screenshot {
-        grid-column: span 1;
-    }
+        <a href="index.html" class="logo">RT</a>
 
-    .project-screenshot img,
-    .project-screenshot.featured-screenshot img {
-        height: auto;
-        max-height: none;
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-        aspect-ratio: auto;
+    </nav>
 
-        object-fit: contain;
-    }
-}
+
+    <main>
+
+        <!-- =====================================
+             PROJECT HERO
+        ====================================== -->
+
+        <section class="project-detail-hero">
+
+            <a href="projects.html" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <span class="project-detail-number">
+                PROJECT 01
+            </span>
+
+            <h1>
+                Mosswood<br>
+                Apothecary
+            </h1>
+
+            <p class="project-detail-subtitle">
+                A browser-based apothecary and foraging game built
+                from scratch with HTML, CSS, and JavaScript.
+            </p>
+
+            <div class="project-detail-tech">
+                HTML · CSS · JavaScript
+            </div>
+
+            <div class="project-detail-buttons">
+
+                <a href="https://racheltrainor.github.io/Mosswood-Apothecary/"
+                   class="button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Play Game
+                </a>
+
+                <a href="https://github.com/RachelTrainor/Mosswood-Apothecary"
+                   class="button secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT THE PROJECT
+        ====================================== -->
+
+        <section class="project-detail-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">01</span>
+
+                <h2>About the Project</h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="project-detail-text">
+
+                <p>
+                    Mosswood Apothecary is a browser-based game I created
+                    from scratch to challenge myself to build something
+                    interactive outside of my coursework. The game is centered
+                    around running a woodland apothecary, where players can
+                    forage for ingredients, manage resources, experiment with
+                    potions, and progress through different areas of Mosswood.
+                </p>
+
+                <p>
+                    I wanted this project to combine programming with a style
+                    and concept I genuinely enjoyed. Building Mosswood gave me
+                    the opportunity to work more with JavaScript while also
+                    designing the interface, gameplay systems, and overall
+                    experience of the game.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FEATURES
+        ====================================== -->
+
+        <section class="project-detail-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">02</span>
+
+                <h2>Features</h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <!-- FEATURE 01 -->
+
+                <div class="feature-card">
+
+                    <span>01</span>
+
+                    <h3>Foraging</h3>
+
+                    <p>
+                        Players can send their familiar into different areas
+                        of Mosswood to search for plants, seeds, and other
+                        resources.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 02 -->
+
+                <div class="feature-card">
+
+                    <span>02</span>
+
+                    <h3>Resource Management</h3>
+
+                    <p>
+                        Ingredients, coins, seeds, potions, and other resources
+                        are tracked and used across different parts of the game.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 03 -->
+
+                <div class="feature-card">
+
+                    <span>03</span>
+
+                    <h3>Potion Experimentation</h3>
+
+                    <p>
+                        Players can combine ingredients in the Potion Room
+                        and experiment with different combinations to discover
+                        recipes.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 04 -->
+
+                <div class="feature-card">
+
+                    <span>04</span>
+
+                    <h3>Progression</h3>
+
+                    <p>
+                        New discoveries, upgrades, recipes, and areas give
+                        players additional goals as they continue building
+                        their apothecary.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SCREENSHOTS
+        ====================================== -->
+
+        <section class="project-detail-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">03</span>
+
+                <h2>Screenshots</h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="project-screenshot-grid">
+
+
+                <!-- LANDING SCREEN -->
+
+                <figure class="project-screenshot featured-screenshot">
+
+                    <img
+                        src="images/mosswood-home.png"
+                        alt="Mosswood Apothecary landing screen"
+                    >
+
+                    <figcaption>
+
+                        <span>LANDING SCREEN</span>
+
+                        <p>Mosswood Apothecary</p>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- FORAGING -->
+
+                <figure class="project-screenshot">
+
+                    <img
+                        src="images/mosswood-forage.png"
+                        alt="Mosswood Apothecary foraging screen"
+                    >
+
+                    <figcaption>
+
+                        <span>GAMEPLAY</span>
+
+                        <p>Foraging &amp; Exploration</p>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- POTION ROOM -->
+
+                <figure class="project-screenshot">
+
+                    <img
+                        src="images/mosswood-potion-room.png"
+                        alt="Mosswood Apothecary Potion Room"
+                    >
+
+                    <figcaption>
+
+                        <span>GAMEPLAY</span>
+
+                        <p>Potion Experimentation</p>
+
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DEVELOPMENT
+        ====================================== -->
+
+        <section class="project-detail-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">04</span>
+
+                <h2>Development</h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="project-detail-columns">
+
+
+                <!-- PROCESS -->
+
+                <div>
+
+                    <span class="detail-label">
+                        THE PROCESS
+                    </span>
+
+                    <h3>Building Mosswood</h3>
+
+                    <p>
+                        I developed Mosswood using HTML for the structure,
+                        CSS for the visual design, and JavaScript for the
+                        gameplay and interactive systems.
+                    </p>
+
+                    <p>
+                        As the project grew, I had to think about how each
+                        part of the game connected to the others. Resources
+                        collected through one system can affect what the
+                        player is able to do somewhere else, which made
+                        organizing the game's logic increasingly important.
+                    </p>
+
+                </div>
+
+
+                <!-- CHALLENGES -->
+
+                <div>
+
+                    <span class="detail-label">
+                        CHALLENGES
+                    </span>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        One of the biggest challenges has been keeping the
+                        different systems working together as I continue
+                        adding new features. A change to one part of the game
+                        can sometimes affect something completely different.
+                    </p>
+
+                    <p>
+                        Testing the game has helped me find unexpected
+                        interactions, logic problems, and balancing issues.
+                        I have continued going back through the code,
+                        troubleshooting problems, and improving systems as
+                        the project develops.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WHAT I LEARNED
+        ====================================== -->
+
+        <section class="project-detail-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">05</span>
+
+                <h2>What I Learned</h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="project-detail-text">
+
+                <p>
+                    Mosswood has given me more hands-on experience using
+                    JavaScript to create an interactive application rather
+                    than a static website. I have worked with game logic,
+                    changing values, user actions, resource management,
+                    progression, and keeping different parts of the interface
+                    updated as the player interacts with the game.
+                </p>
+
+                <p>
+                    It has also given me more experience debugging my own
+                    work. As I test the game, I find things that do not behave
+                    the way I expected and have to trace the problem back
+                    through my code. Overall, this project has helped me
+                    become more comfortable taking an idea and turning it
+                    into a larger working project that I can continue
+                    improving over time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FINAL PROJECT LINKS
+        ====================================== -->
+
+        <section class="project-detail-footer">
+
+            <span class="project-detail-number">
+                EXPLORE THE PROJECT
+            </span>
+
+            <h2>Enter Mosswood.</h2>
+
+            <p>
+                Explore the game yourself or take a look at the code
+                behind the project.
+            </p>
+
+            <div class="project-detail-buttons">
+
+                <a href="https://racheltrainor.github.io/Mosswood-Apothecary/"
+                   class="button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Play Game
+                </a>
+
+                <a href="https://github.com/RachelTrainor/Mosswood-Apothecary"
+                   class="button secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <span>© 2026 Rachel Trainor</span>
+
+        <span>Designed &amp; Built by Rachel Trainor</span>
+
+    </footer>
+
+
+</body>
+
+</html>
